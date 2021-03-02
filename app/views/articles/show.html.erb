@@ -1,0 +1,8 @@
+<div class="container article">
+  <h1><%= @article.title %></h1>
+  <p class="lead"><%= @article.content %></p>
+
+  <button class="btn btn-success" type="submit"><%= link_to "Update the article",  edit_path(@article)%></button>
+  <button class="btn btn-warning" type="submit"><%= link_to "Back to the list",  root_path%></button>
+  <button class="btn btn-danger" type="submit"><%= link_to "Delete #{@article.title}", article_path(@article), method: :delete, data: { confirm: "Are you sure?" } %></button>
+</div>

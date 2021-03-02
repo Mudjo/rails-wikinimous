@@ -1,0 +1,7 @@
+<div class="container index">
+  <button class="btn btn-warning"><%= link_to "Create a new article", create_path %></button>
+
+  <% @articles.each do |article| %>
+    <h1><%= link_to article.title, article_path(article) %></h1>
+  <% end %>
+</div>
